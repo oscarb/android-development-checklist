@@ -3,9 +3,7 @@ package se.oscarb.androiddevelopmentchecklist;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Oscar on 2016-04-24.
- */
+
 public class Criteria {
     /*
         Instance variables

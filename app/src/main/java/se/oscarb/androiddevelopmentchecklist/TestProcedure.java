@@ -1,8 +1,6 @@
 package se.oscarb.androiddevelopmentchecklist;
 
-/**
- * Created by Oscar on 2016-04-24.
- */
+
 public class TestProcedure {
     /*
         Instance variables
