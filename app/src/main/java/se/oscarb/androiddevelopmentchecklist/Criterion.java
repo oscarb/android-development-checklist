@@ -1,10 +1,12 @@
 package se.oscarb.androiddevelopmentchecklist;
 
+import android.renderscript.ScriptIntrinsicYuvToRGB;
+
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class Criteria {
+public class Criterion {
     /*
         Instance variables
      */
@@ -23,7 +25,7 @@ public class Criteria {
    /*
         Constructors
      */
-    public Criteria() {
+    public Criterion() {
         area = null;
         id = null;
         description = null;
@@ -32,7 +34,7 @@ public class Criteria {
         isChecked = false;
     }
 
-    public Criteria(String area, String id, String description) {
+    public Criterion(String area, String id, String description) {
         this();
         this.area = area;
         this.id = id;
@@ -45,7 +47,7 @@ public class Criteria {
         }
     }
 
-    public Criteria(String area, String id, String description, String shortDescription) {
+    public Criterion(String area, String id, String description, String shortDescription) {
         this();
         this.area = area;
         this.id = id;
@@ -53,8 +55,8 @@ public class Criteria {
         this.shortDescription = shortDescription;
     }
 
-    public Criteria(String area, String id, String description, String shortDescription,
-                    List<TestProcedure> testProcedures) {
+    public Criterion(String area, String id, String description, String shortDescription,
+                     List<TestProcedure> testProcedures) {
         this();
         this.area = area;
         this.id = id;
@@ -102,6 +104,18 @@ public class Criteria {
 
     public void toggleChecked() {
         isChecked = !isChecked;
+    }
+
+    /*
+        Static methods
+     */
+    public static List<Criterion> createCriteriaList (int num) {
+        List<Criterion> criteria = new ArrayList<>();
+
+        for (int i = 0; i < num; i++) {
+            criteria.add(new Criterion("Area " + num, "ID" + num, "Description " + num));
+        }
+
     }
 
 }
