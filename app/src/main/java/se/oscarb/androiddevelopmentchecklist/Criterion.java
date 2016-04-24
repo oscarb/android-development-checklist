@@ -116,6 +116,7 @@ public class Criterion {
             criteria.add(new Criterion("Area " + num, "ID" + num, "Description " + num));
         }
 
+        return criteria;
     }
 
 }
